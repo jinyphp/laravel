@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jiny\\Admin\\JinyLaravelServiceProvider"
+                "Jiny\\Laravel\\JinyLaravelServiceProvider"
             ]
         }
     }
