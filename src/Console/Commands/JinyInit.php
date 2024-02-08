@@ -5,7 +5,9 @@ namespace Jiny\Laravel\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
+use Illuminate\Support\Facades\Artisan;
 
 class JinyInit extends Command
 {
@@ -73,6 +75,35 @@ class JinyInit extends Command
         */
 
         $this->info('updating laravel to jiny project...');
+
+        // 지니 Welcome 화면으로 변경합니다.
+        // Check if the source file exists
+        $packagePath = base_path('vendor/jiny/laravel');
+        $sourceFile = "/resources/views/welcome.blade.php";
+        $viewsPath = resource_path('views');
+        $destinationFile = "/welcome.blade.php";
+        if (File::exists($packagePath.$sourceFile)) {
+            // Copy the source file to the destination file
+            File::copy($packagePath.$sourceFile, $viewsPath.$destinationFile);
+
+            $this->info('File copied successfully');
+        } else {
+            $this->info('Source file does not exist');
+        }
+
+
+        // Call the vendor:publish command
+        Artisan::call('vendor:publish', [
+            '--tag' => 'public', // Change this tag to match the one you used in your package
+            '--provider' => 'Jiny\Laravel\JinyLaravelServiceProvider' // Change this to your package's service provider
+        ]);
+
+        // Get the output of the command
+        $output = Artisan::output();
+
+        $this->info($output); // Output the result of the command
+
+
         return 0;
     }
 
