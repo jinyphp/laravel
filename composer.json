@@ -17,25 +17,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.2",
-        "jiny/modules": "^0.0.2",
-        "jiny/config": "^0.2.3",
-
-        "jiny/html": "^0.1.1",
-        "jiny/ui": "^0.9.5",
-        "jiny/ui2": "^0.0.4",
-        "jiny/theme": "^0.9.10",
-
-        "jiny/admin": "^0.0.5",
-        "jiny/wiretable": "^0.0.2",
-
-        "jiny/auth": "0.0.10",
-        "jiny/social": "^0.0.3",
-        "jiny/fortify": "^0.0.1",
-        "jiny/jetstream": "^0.0.2",
-
-        "livewire/livewire": "^3.0"
+        "php": "^8.1"
     },
     "autoload": {
         "psr-4": {
