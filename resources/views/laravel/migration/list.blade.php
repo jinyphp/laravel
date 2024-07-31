@@ -16,7 +16,12 @@
 
                 <td>{{$item->migration}}</td>
                 <td width='100'>{{$item->batch}}</td>
-                <td width='100'>Rollback</td>
+                <td width='100'>
+                    <x-click wire:click="hook('rollback',{{$item->id}})">
+                        Rollback
+                    </x-click>
+
+                </td>
 
             </x-wire-tbody-item>
             @endforeach
