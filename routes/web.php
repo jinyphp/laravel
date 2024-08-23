@@ -26,6 +26,10 @@ if(function_exists("isAdminPackage")) {
             '/migrations',
             \Jiny\Laravel\Http\Controllers\LaravelMigrationController::class);
 
+        Route::get('/view',[
+            \Jiny\Laravel\Http\Controllers\LaravelViewCache::class,
+            'index']);
+
         Route::get('setting', [\Jiny\Laravel\Http\Controllers\SettingController::class,"index"]);
 
     });

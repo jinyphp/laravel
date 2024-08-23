@@ -21,4 +21,27 @@
             </div>
         </div>
     </div>
+
+    <div class="col-3">
+        <div class="card">
+            <div class="card-header">
+                <x-flex-between>
+                    <div>
+                        <h5 class="card-title">
+                            <a href="/admin/laravel/view">View 캐시</a>
+                        </h5>
+                        <h6 class="card-subtitle text-muted">
+                            라라벨의 view 캐시를 관리합니다.
+                        </h6>
+                    </div>
+                    <div>
+                        @icon("info-circle.svg")
+                    </div>
+                </x-flex-between>
+            </div>
+            <div class="card-body">
+
+            </div>
+        </div>
+    </div>
 </div>
