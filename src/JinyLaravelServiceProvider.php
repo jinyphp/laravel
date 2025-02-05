@@ -28,6 +28,12 @@ class JinyLaravelServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 \Jiny\Laravel\Console\Commands\JinyInit::class,
+                // \Jiny\Laravel\Console\Commands\BackupSeeder::class,
+
+                // \Jiny\Laravel\Console\Commands\TableSeeder::class,
+                // \Jiny\Laravel\Console\Commands\TableDrop::class,
+                // \Jiny\Laravel\Console\Commands\TableShow::class,
+
                 \Jiny\Laravel\Console\Commands\PackageCheck::class
             ]);
         }

@@ -19,7 +19,7 @@ class LaravelMigrationController extends WireTablePopupForms
         $this->setVisit($this);
 
         ##
-        $this->actions['table'] = "migrations"; // 테이블 정보
+        $this->actions['table']['name'] = "migrations"; // 테이블 정보
 
         $this->actions['paging'] = 20; // 페이지 기본값
 
