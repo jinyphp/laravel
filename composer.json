@@ -17,12 +17,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^8.2",
-        "jiny/locale": "^0.3.2",
-        "jiny/manual": "^0.0.2",
-        "jiny/modules": "^0.3.2",
-        "jiny/admin": "^0.9",
-        "jiny/auth": "^0.12"
+        "php": "^8.2"
     },
     "autoload": {
         "psr-4": {
