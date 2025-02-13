@@ -18,9 +18,15 @@ class JinyLaravelServiceProvider extends ServiceProvider
         // 데이터베이스
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
+        // 리소스 퍼블리싱 설정
+        $this->publishes([
+            __DIR__.'/resources/views' => resource_path('views'),
+        ], $this->package.'-views');
+
+        // 다른 종류의 애셋이 있다면 별도로 지정
         // $this->publishes([
-        //     __DIR__.'/../resources/assets' => public_path('vendor/jiny'),
-        // ], 'public');
+        //     __DIR__.'/resources/js' => public_path('vendor/'.$this->package.'/js'),
+        // ], $this->package.'-scripts');
 
         // 커멘드 명령
         if ($this->app->runningInConsole()) {

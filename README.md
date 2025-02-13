@@ -43,3 +43,9 @@ php artisan jiny:init
 `jiny/laravel`에는 라라벨의 기능을 보다 쉽게 사용할 수 있도록 도와주는 기능들을 몇개 제공하고 있습니다.
 
 * 테이블관리
+
+## Assets 복사
+
+```
+php artisan vendor:publish --tag="laravel-assets-views"
+```
