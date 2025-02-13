@@ -21,10 +21,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Jiny\\Laravel\\":"src/"
+            "Jiny\\Laravel\\":"/"
         },
         "files" : [
-            "src/Helpers/Helper.php"
+            "Helpers/Helper.php"
         ]
     },
     "autoload-dev": {
