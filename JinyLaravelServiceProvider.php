@@ -20,8 +20,8 @@ class JinyLaravelServiceProvider extends ServiceProvider
 
         // 리소스 퍼블리싱 설정
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views'),
-        ], $this->package.'-views');
+            __DIR__.'/resources/views/welcome.blade.php' => resource_path('views/welcome.blade.php'),
+        ], 'laravel-assets');
 
         // 다른 종류의 애셋이 있다면 별도로 지정
         // $this->publishes([
